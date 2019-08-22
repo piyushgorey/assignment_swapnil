@@ -1,0 +1,31 @@
+<header>
+    <h1 class="header-font">Post Your Blog Here</h1>
+
+</header>
+<br />
+    <form action="/addpost" method="POST">
+
+        <div>
+            <div class='form-element'>
+                <label class='p-relative' for="title"><b>Add a Title</b></label>
+                <input type="text" id="title" name="title" placeholder="Title" required>
+            </div>
+            <div class='form-element'>
+                <label class='p-relative' for="content"><b>What's in Your Mind</b> </label>
+                <textarea row='4' id="content" name="content" placeholder="Add your content here" required></textarea>
+            </div>
+            <div class='form-element'>
+                <label class='p-relative' for="image-url"><b>Add an Image URL</b></label>
+                <input type="text" id="image-url" name="image-url" placeholder="Add Image URL">
+                {{!-- <img src="document.getElementById('image-url').value" width=40px height=40px> --}}
+            </div>
+            <div class='form-element'>
+                <label class='p-relative' for="video-url"><b>Add a Video URL</b></label>
+                <input type="text" id="video-url" name="video-url" placeholder="Add Video URL">
+            </div>
+        </div>
+        <div class='form-element'>
+            <button type="submit" class='btn p-relative' style='width:50%; left:25%'> Add Post</button>
+        </div>
+        
+    </form>

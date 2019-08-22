@@ -1,0 +1,41 @@
+
+<div id="signUpBox" class="login-modal">
+
+    <form class="login-modal-content animate" action='/registered' method="POST">
+        <div class="login-imgcontainer">
+            <span onclick="document.getElementById('signUpBox').style.display='none'" class="close" title="Close Modal">&times;</span>
+            
+            <h1 class="login-modal-box-title">Sign up</h1>
+        </div>
+
+        <div class="login-container">
+            {{!-- <label for="email"><b>Email</b></label>
+            <input class="authinput" type="text" placeholder="Enter email" name="email" required> --}}
+
+            <label for="username"><b>Email</b></label>
+            <input class="authinput" type="text" placeholder="Enter username" name="username" required>
+
+            <label for="password"><b>Password</b></label>
+            <input class="authinput" type="password" placeholder="Enter Password" name="password" required>
+
+            <label for="firstName"><b>First Name</b></label>
+            <input class="authinput" type="text" placeholder="Enter first name" name="firstName">
+
+            <label for="lastName"><b>Last Name</b></label>
+            <input class="authinput" type="text" placeholder="Enter last name" name="lastName">
+
+            {{!-- <label for="displayName"><b>Display Name</b></label>
+            <input class="authinput" type="text" placeholder="Enter display name" name="displayName"> --}}
+
+            <button class="authbutton" type="submit">Sign up</button>
+
+        </div>
+
+        <div class="login-container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('signUpBox').style.display='none'" class="authbutton cancelbtn">Cancel</button>
+            <span class="psw">Already have an account?
+                <a onclick="document.getElementById('signUpBox').style.display='none';document.getElementById('loginBox').style.display='block'" href="#">Login</a>
+            </span>
+        </div>
+    </form>
+</div>

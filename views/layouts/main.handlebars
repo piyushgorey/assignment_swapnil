@@ -1,0 +1,69 @@
+{{!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/public/css/site.css" crossorigin="anonymous">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>{{ title }}</h1>
+        </header>
+        {{#if error}}
+            <div class="error">{{ error }}</div>
+        {{/if}}
+        <section class="card">
+            {{{ body }}}
+        </section>
+    </main>
+</body>
+
+</html> --}}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Blog Post</title>
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/css/fonts.css" rel="stylesheet">
+    <link href="/public/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/public/css/style.css" rel="stylesheet">
+     <link href="/public/css/main.css" rel="stylesheet">
+     <script src="/public/js/site.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            {{> nav}}
+            {{user}}
+            {{!-- <div class="paddngTop63"> </div> --}}
+            <div style="margin-top:63px">
+                
+                {{#if error}}
+                    <div class="error">{{ error }}</div>
+                {{else}}
+                    {{{body}}}
+                {{/if}}
+            </div>
+        </div>
+        <div class="footer custom-footer">
+                <div class="left">CS 546 - Summer2019</div>
+                <div class="right">Final Project - SwapnilGorey |Web Programming-I | 10443462 </div>
+        </div>
+    </div>
+    {{> login}} {{> signup}} {{> scripts}}
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,41 @@
+<header>
+    <h1 class="header-font">Welcome to the Blog Post</h1>
+   
+</header>
+
+<section style="margin-bottom:10vh">
+    {{#each posts}}
+    <article class="blog-list">
+        {{!-- <header class='bloglist'> --}}
+            <img src='{{this.img}}'width='70px' height="70px"> 
+            <h3>{{this.title}}</h3>
+            {{!-- <icon onclick="(this.favorite= !this.favorite)" class="ifFavorite? red: empty"> heart icon</icon> --}}
+            <p class='padding-none'> Posted By:{{this.author.name}}</p>
+            <br> 
+            <p class='padding-none text-left-align'>{{this.content}}</p>
+            {{!-- <a  href="/delete-recipe/{{recipe._id}}">like</a> --}}
+            {{#if this.isLiked}}
+            <a  href="/like/{{this._id}}">UnLike </a>
+            {{else}}
+             <a  href="/like/{{this._id}}">Like </a>
+            {{/if}}
+           
+            
+        {{!-- </header> --}}
+        
+       
+    </article>
+{{/each}}
+</section>
+
+{{!-- 
+<div class=allposts >
+    {{#each posts}}
+    <dl>
+        <dd id="blogtitles">{{this.title}}</dd>
+        <dd id="blogauthor" style="display:inline-block">Posted By: {{this.author.name}}</dd>
+        <br>
+        <dt id= "blogcontent"> "{{this.content}}</dt>
+    </dl>   
+    
+</div> --}}

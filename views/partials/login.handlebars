@@ -1,0 +1,28 @@
+<div id="loginBox" class="login-modal">
+
+    <form class="login-modal-content animate" action='/private' method="POST">
+        <div class="login-imgcontainer">
+            <span onclick="document.getElementById('loginBox').style.display='none'" class="close" title="Close Modal">&times;</span>
+            
+            <h1 class="login-modal-box-title">Login</h1>
+        </div>
+
+        <div class="login-container">
+            <label for="email"><b>Email</b></label>
+            <input class="authinput" type="text" placeholder="Enter email" name="email" required>
+
+            <label for="password"><b>Password</b></label>
+            <input class="authinput" type="password" placeholder="Enter Password" name="password" required>
+
+            <button class="authbutton" type="submit">Login</button>
+        </div>
+
+        <div class="login-container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('loginBox').style.display='none'" class="authbutton cancelbtn">Cancel</button>
+            <span class="psw">Need an account?
+                <a onclick="document.getElementById('loginBox').style.display='none';document.getElementById('signUpBox').style.display='block'" href="#">Signup</a>
+            </span>
+        </div>
+    </form>
+
+</div>

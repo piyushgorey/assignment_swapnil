@@ -1,0 +1,37 @@
+<div class="topNav container" id="nav">
+    <div class="logoSect" style='width:auto' >
+        {{#if isUserLoggedIn}}
+        <a class="logo" href="/userdetails">Welcome {{user.name}}</a>
+        {{else}}
+        <a class="logo" href="/">Blog Post</a>
+        {{/if}}
+
+    </div>
+    <div class="mainNav custom-nav-bar">
+        <ul class="cfx" style="padding:0px !important; display:block" >
+            {{!-- <li class="cfx" style="display: none;"> --}}
+            <li class="cfx" >
+                <form class="searchForm" action="" method="get" autocomplete="off ">
+                    <input type="text " name="key " class="searchInput " placeholder="Search" required=" ">
+                </form>
+            </li>
+            <li class="cfx "><a href="/">All Blogs</a></li>
+            {{#if isUserLoggedIn}}
+            <li class="cfx "><a href="/myPosts">My Blogs</a></li>
+            <li class="cfx "><a href="/myFav">Fav Blogs</a></li>
+            <li class="cfx "><a href="/private">Add Blog</a></li>
+
+            {{/if}}
+
+            <li class="cfx ">
+                {{#if isUserLoggedIn}}
+                    <a class="signin" onclick="location.href='/logout'">Logout</a>
+                {{else}}
+                    <a class="signin" onclick="document.getElementById('loginBox').style.display='block'">Login</a>
+                {{/if}}
+            </li>
+        </ul>
+
+    </div>
+    <div class="clr "></div>
+</div>
